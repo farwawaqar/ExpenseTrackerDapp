@@ -1,0 +1,1715 @@
+{
+  "contractName": "ExpenseTracker",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "balance",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "transaction",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "transactionOwner",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "transactionDescription",
+          "type": "string"
+        },
+        {
+          "internalType": "int64",
+          "name": "amount",
+          "type": "int64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "internalType": "int64",
+          "name": "amount",
+          "type": "int64"
+        }
+      ],
+      "name": "addTransaction",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "transactionCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "getHello",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function",
+      "constant": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.0+commit.26b70077\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"int64\",\"name\":\"amount\",\"type\":\"int64\"}],\"name\":\"addTransaction\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"balance\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getHello\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"transaction\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"transactionOwner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"transactionDescription\",\"type\":\"string\"},{\"internalType\":\"int64\",\"name\":\"amount\",\"type\":\"int64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"transactionCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/G/expenseTracker/backend/contracts/ExpenseTracker.sol\":\"ExpenseTracker\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/G/expenseTracker/backend/contracts/ExpenseTracker.sol\":{\"keccak256\":\"0x28101e1f94236ccf5029a1dbece76dfff6d436c9ef183e94439c48a57af417a9\",\"urls\":[\"bzz-raw://19d4cd051f0377031299642df9d03b3c91146c36f9eeb0829f34f40a6bf215ee\",\"dweb:/ipfs/QmYsZ4D26V5Y8dbXwgVPpbVSKQjAUJHZRmqBvQBvoiGLtn\"]}},\"version\":1}",
+  "bytecode": "0x6080604052600160005534801561001557600080fd5b50610644806100256000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806346bd08411461005c57806372d06472146101435780638da9b7721461020b578063b69ef8a81461028e578063b77bf600146102ac575b600080fd5b6100886004803603602081101561007257600080fd5b81019080803590602001909291905050506102ca565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001806020018360070b60070b8152602001828103825284818151815260200191508051906020019080838360005b838110156101065780820151818401526020810190506100eb565b50505050905090810190601f1680156101335780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6102096004803603604081101561015957600080fd5b810190808035906020019064010000000081111561017657600080fd5b82018360208201111561018857600080fd5b803590602001918460018302840111640100000000831117156101aa57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290803560070b90602001909291905050506103c6565b005b6102136104df565b6040518080602001828103825283818151815260200191508051906020019080838360005b83811015610253578082015181840152602081019050610238565b50505050905090810190601f1680156102805780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61029661051c565b6040518082815260200191505060405180910390f35b6102b4610522565b6040518082815260200191505060405180910390f35b600181815481106102d757fe5b90600052602060002090600302016000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103a95780601f1061037e576101008083540402835291602001916103a9565b820191906000526020600020905b81548152906001019060200180831161038c57829003601f168201915b5050505050908060020160009054906101000a900460070b905083565b6103ce61052f565b60405180606001604052803373ffffffffffffffffffffffffffffffffffffffff1681526020018481526020018360070b8152509050600181908060018154018082558091505060019003906000526020600020906003020160009091909190915060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506020820151816001019080519060200190610493929190610569565b5060408201518160020160006101000a81548167ffffffffffffffff021916908360070b67ffffffffffffffff16021790555050508160070b6000808282540192505081905550505050565b60606040518060400160405280601381526020017f48656c6c6f2066726f6d20436f6e747261637400000000000000000000000000815250905090565b60005481565b6000600180549050905090565b6040518060600160405280600073ffffffffffffffffffffffffffffffffffffffff16815260200160608152602001600060070b81525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105aa57805160ff19168380011785556105d8565b828001600101855582156105d8579182015b828111156105d75782518255916020019190600101906105bc565b5b5090506105e591906105e9565b5090565b61060b91905b808211156106075760008160009055506001016105ef565b5090565b9056fea2646970667358221220b90ecce0009cd63703d64adf3ebb35776913cdd31fade87b3f3c67a2e23486d764736f6c63430006000033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806346bd08411461005c57806372d06472146101435780638da9b7721461020b578063b69ef8a81461028e578063b77bf600146102ac575b600080fd5b6100886004803603602081101561007257600080fd5b81019080803590602001909291905050506102ca565b604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001806020018360070b60070b8152602001828103825284818151815260200191508051906020019080838360005b838110156101065780820151818401526020810190506100eb565b50505050905090810190601f1680156101335780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6102096004803603604081101561015957600080fd5b810190808035906020019064010000000081111561017657600080fd5b82018360208201111561018857600080fd5b803590602001918460018302840111640100000000831117156101aa57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290803560070b90602001909291905050506103c6565b005b6102136104df565b6040518080602001828103825283818151815260200191508051906020019080838360005b83811015610253578082015181840152602081019050610238565b50505050905090810190601f1680156102805780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61029661051c565b6040518082815260200191505060405180910390f35b6102b4610522565b6040518082815260200191505060405180910390f35b600181815481106102d757fe5b90600052602060002090600302016000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103a95780601f1061037e576101008083540402835291602001916103a9565b820191906000526020600020905b81548152906001019060200180831161038c57829003601f168201915b5050505050908060020160009054906101000a900460070b905083565b6103ce61052f565b60405180606001604052803373ffffffffffffffffffffffffffffffffffffffff1681526020018481526020018360070b8152509050600181908060018154018082558091505060019003906000526020600020906003020160009091909190915060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506020820151816001019080519060200190610493929190610569565b5060408201518160020160006101000a81548167ffffffffffffffff021916908360070b67ffffffffffffffff16021790555050508160070b6000808282540192505081905550505050565b60606040518060400160405280601381526020017f48656c6c6f2066726f6d20436f6e747261637400000000000000000000000000815250905090565b60005481565b6000600180549050905090565b6040518060600160405280600073ffffffffffffffffffffffffffffffffffffffff16815260200160608152602001600060070b81525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105aa57805160ff19168380011785556105d8565b828001600101855582156105d8579182015b828111156105d75782518255916020019190600101906105bc565b5b5090506105e591906105e9565b5090565b61060b91905b808211156106075760008160009055506001016105ef565b5090565b9056fea2646970667358221220b90ecce0009cd63703d64adf3ebb35776913cdd31fade87b3f3c67a2e23486d764736f6c63430006000033",
+  "sourceMap": "36:698:0:-:0;;;94:1;73:22;;36:698;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:698:0;;;;;;;",
+  "deployedSourceMap": "36:698:0:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:698:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;108:32;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;108:32:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;108:32:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;286:219;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;286:219:0;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;286:219:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;286:219:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;286:219:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;286:219:0;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;623:102;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;623:102:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;73:22;;;:::i;:::-;;;;;;;;;;;;;;;;;;;517:98;;;:::i;:::-;;;;;;;;;;;;;;;;;;;108:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;286:219::-;370:22;;:::i;:::-;395:42;;;;;;;;407:10;395:42;;;;;;418:11;395:42;;;;430:6;395:42;;;;;370:67;;448:11;465:3;448:21;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;448:21:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;491:6;480:17;;:7;;:17;;;;;;;;;;;286:219;;;:::o;623:102::-;664:13;689:28;;;;;;;;;;;;;;;;;;;623:102;:::o;73:22::-;;;;:::o;517:98::-;566:4;589:11;:18;;;;582:25;;517:98;:::o;36:698::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.22 <0.9.0;\r\n\r\ncontract ExpenseTracker {\r\n    \r\n    int public balance = 1;\r\n    \r\n    Transaction[] public transaction;\r\n\r\n    struct Transaction {\r\n        address transactionOwner;\r\n        string transactionDescription;\r\n        int64 amount;\r\n    }\r\n    \r\n    function addTransaction(string memory description , int64 amount) public {\r\n        Transaction memory tx1 = Transaction(msg.sender,description,amount);\r\n        transaction.push(tx1);\r\n        balance += amount;\r\n    }\r\n    \r\n    function transactionCount() public view returns (uint){\r\n        return transaction.length;\r\n    }\r\n\r\n    function getHello() public pure returns (string memory){\r\n        return \"Hello from Contract\";\r\n    }\r\n    \r\n}",
+  "sourcePath": "G:/expenseTracker/backend/contracts/ExpenseTracker.sol",
+  "ast": {
+    "absolutePath": "/G/expenseTracker/backend/contracts/ExpenseTracker.sol",
+    "exportedSymbols": {
+      "ExpenseTracker": [
+        59
+      ]
+    },
+    "id": 60,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 59,
+        "linearizedBaseContracts": [
+          59
+        ],
+        "name": "ExpenseTracker",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "b69ef8a8",
+            "id": 4,
+            "name": "balance",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 59,
+            "src": "73:22:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_int256",
+              "typeString": "int256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "int",
+              "nodeType": "ElementaryTypeName",
+              "src": "73:3:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_int256",
+                "typeString": "int256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "94:1:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "46bd0841",
+            "id": 7,
+            "name": "transaction",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 59,
+            "src": "108:32:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Transaction_$14_storage_$dyn_storage",
+              "typeString": "struct ExpenseTracker.Transaction[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 5,
+                "name": "Transaction",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 14,
+                "src": "108:11:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Transaction_$14_storage_ptr",
+                  "typeString": "struct ExpenseTracker.Transaction"
+                }
+              },
+              "id": 6,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "108:13:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Transaction_$14_storage_$dyn_storage_ptr",
+                "typeString": "struct ExpenseTracker.Transaction[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "ExpenseTracker.Transaction",
+            "id": 14,
+            "members": [
+              {
+                "constant": false,
+                "id": 9,
+                "name": "transactionOwner",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 14,
+                "src": "179:24:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "179:7:0",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 11,
+                "name": "transactionDescription",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 14,
+                "src": "214:29:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 10,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "214:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13,
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 14,
+                "src": "254:12:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int64",
+                  "typeString": "int64"
+                },
+                "typeName": {
+                  "id": 12,
+                  "name": "int64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "254:5:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int64",
+                    "typeString": "int64"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Transaction",
+            "nodeType": "StructDefinition",
+            "scope": 59,
+            "src": "149:125:0",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 40,
+              "nodeType": "Block",
+              "src": "359:146:0",
+              "statements": [
+                {
+                  "assignments": [
+                    22
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 22,
+                      "name": "tx1",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 40,
+                      "src": "370:22:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transaction_$14_memory_ptr",
+                        "typeString": "struct ExpenseTracker.Transaction"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 21,
+                        "name": "Transaction",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 14,
+                        "src": "370:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Transaction_$14_storage_ptr",
+                          "typeString": "struct ExpenseTracker.Transaction"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 29,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 24,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 107,
+                          "src": "407:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 25,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "407:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 26,
+                        "name": "description",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 16,
+                        "src": "418:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 27,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 18,
+                        "src": "430:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int64",
+                          "typeString": "int64"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_int64",
+                          "typeString": "int64"
+                        }
+                      ],
+                      "id": 23,
+                      "name": "Transaction",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14,
+                      "src": "395:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Transaction_$14_storage_ptr_$",
+                        "typeString": "type(struct ExpenseTracker.Transaction storage pointer)"
+                      }
+                    },
+                    "id": 28,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "395:42:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Transaction_$14_memory",
+                      "typeString": "struct ExpenseTracker.Transaction memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "370:67:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 33,
+                        "name": "tx1",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22,
+                        "src": "465:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Transaction_$14_memory_ptr",
+                          "typeString": "struct ExpenseTracker.Transaction memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Transaction_$14_memory_ptr",
+                          "typeString": "struct ExpenseTracker.Transaction memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 30,
+                        "name": "transaction",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7,
+                        "src": "448:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Transaction_$14_storage_$dyn_storage",
+                          "typeString": "struct ExpenseTracker.Transaction storage ref[] storage ref"
+                        }
+                      },
+                      "id": 32,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "448:16:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Transaction_$14_storage_$returns$__$",
+                        "typeString": "function (struct ExpenseTracker.Transaction storage ref)"
+                      }
+                    },
+                    "id": 34,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "448:21:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 35,
+                  "nodeType": "ExpressionStatement",
+                  "src": "448:21:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 38,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 36,
+                      "name": "balance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4,
+                      "src": "480:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 37,
+                      "name": "amount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18,
+                      "src": "491:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int64",
+                        "typeString": "int64"
+                      }
+                    },
+                    "src": "480:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "id": 39,
+                  "nodeType": "ExpressionStatement",
+                  "src": "480:17:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "72d06472",
+            "id": 41,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addTransaction",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 19,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16,
+                  "name": "description",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 41,
+                  "src": "310:25:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 15,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "310:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 18,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 41,
+                  "src": "338:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int64",
+                    "typeString": "int64"
+                  },
+                  "typeName": {
+                    "id": 17,
+                    "name": "int64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "338:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int64",
+                      "typeString": "int64"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "309:42:0"
+            },
+            "returnParameters": {
+              "id": 20,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "359:0:0"
+            },
+            "scope": 59,
+            "src": "286:219:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 49,
+              "nodeType": "Block",
+              "src": "571:44:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 46,
+                      "name": "transaction",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "589:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Transaction_$14_storage_$dyn_storage",
+                        "typeString": "struct ExpenseTracker.Transaction storage ref[] storage ref"
+                      }
+                    },
+                    "id": 47,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "589:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 45,
+                  "id": 48,
+                  "nodeType": "Return",
+                  "src": "582:25:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "b77bf600",
+            "id": 50,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transactionCount",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 42,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "542:2:0"
+            },
+            "returnParameters": {
+              "id": 45,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 50,
+                  "src": "566:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 43,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "566:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "565:6:0"
+            },
+            "scope": 59,
+            "src": "517:98:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 57,
+              "nodeType": "Block",
+              "src": "678:47:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "48656c6c6f2066726f6d20436f6e7472616374",
+                    "id": 55,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "696:21:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_7a5cd4a3a868952639bd5fa423c64fbda43f88c671ca41dd611fa59d43e4a74d",
+                      "typeString": "literal_string \"Hello from Contract\""
+                    },
+                    "value": "Hello from Contract"
+                  },
+                  "functionReturnParameters": 54,
+                  "id": 56,
+                  "nodeType": "Return",
+                  "src": "689:28:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "8da9b772",
+            "id": 58,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getHello",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "640:2:0"
+            },
+            "returnParameters": {
+              "id": 54,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 58,
+                  "src": "664:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 52,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "664:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "663:15:0"
+            },
+            "scope": 59,
+            "src": "623:102:0",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 60,
+        "src": "36:698:0"
+      }
+    ],
+    "src": "0:734:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/G/expenseTracker/backend/contracts/ExpenseTracker.sol",
+      "exportedSymbols": {
+        "ExpenseTracker": [
+          59
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            59
+          ],
+          "name": "ExpenseTracker",
+          "scope": 60
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "b69ef8a8",
+              "name": "balance",
+              "overrides": null,
+              "scope": 59,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "int256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "int",
+                  "type": "int256"
+                },
+                "id": 2,
+                "name": "ElementaryTypeName",
+                "src": "73:3:0"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "31",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 1",
+                  "value": "1"
+                },
+                "id": 3,
+                "name": "Literal",
+                "src": "94:1:0"
+              }
+            ],
+            "id": 4,
+            "name": "VariableDeclaration",
+            "src": "73:22:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "46bd0841",
+              "name": "transaction",
+              "overrides": null,
+              "scope": 59,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct ExpenseTracker.Transaction[]",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "struct ExpenseTracker.Transaction[]"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Transaction",
+                      "referencedDeclaration": 14,
+                      "type": "struct ExpenseTracker.Transaction"
+                    },
+                    "id": 5,
+                    "name": "UserDefinedTypeName",
+                    "src": "108:11:0"
+                  }
+                ],
+                "id": 6,
+                "name": "ArrayTypeName",
+                "src": "108:13:0"
+              }
+            ],
+            "id": 7,
+            "name": "VariableDeclaration",
+            "src": "108:32:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "ExpenseTracker.Transaction",
+              "name": "Transaction",
+              "scope": 59,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "transactionOwner",
+                  "overrides": null,
+                  "scope": 14,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 8,
+                    "name": "ElementaryTypeName",
+                    "src": "179:7:0"
+                  }
+                ],
+                "id": 9,
+                "name": "VariableDeclaration",
+                "src": "179:24:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "transactionDescription",
+                  "overrides": null,
+                  "scope": 14,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 10,
+                    "name": "ElementaryTypeName",
+                    "src": "214:6:0"
+                  }
+                ],
+                "id": 11,
+                "name": "VariableDeclaration",
+                "src": "214:29:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "amount",
+                  "overrides": null,
+                  "scope": 14,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "int64",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "int64",
+                      "type": "int64"
+                    },
+                    "id": 12,
+                    "name": "ElementaryTypeName",
+                    "src": "254:5:0"
+                  }
+                ],
+                "id": 13,
+                "name": "VariableDeclaration",
+                "src": "254:12:0"
+              }
+            ],
+            "id": 14,
+            "name": "StructDefinition",
+            "src": "149:125:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "72d06472",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addTransaction",
+              "overrides": null,
+              "scope": 59,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "description",
+                      "overrides": null,
+                      "scope": 41,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 15,
+                        "name": "ElementaryTypeName",
+                        "src": "310:6:0"
+                      }
+                    ],
+                    "id": 16,
+                    "name": "VariableDeclaration",
+                    "src": "310:25:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "amount",
+                      "overrides": null,
+                      "scope": 41,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int64",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int64",
+                          "type": "int64"
+                        },
+                        "id": 17,
+                        "name": "ElementaryTypeName",
+                        "src": "338:5:0"
+                      }
+                    ],
+                    "id": 18,
+                    "name": "VariableDeclaration",
+                    "src": "338:12:0"
+                  }
+                ],
+                "id": 19,
+                "name": "ParameterList",
+                "src": "309:42:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 20,
+                "name": "ParameterList",
+                "src": "359:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        22
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "tx1",
+                          "overrides": null,
+                          "scope": 40,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct ExpenseTracker.Transaction",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Transaction",
+                              "referencedDeclaration": 14,
+                              "type": "struct ExpenseTracker.Transaction"
+                            },
+                            "id": 21,
+                            "name": "UserDefinedTypeName",
+                            "src": "370:11:0"
+                          }
+                        ],
+                        "id": 22,
+                        "name": "VariableDeclaration",
+                        "src": "370:22:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": true,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "struct ExpenseTracker.Transaction memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                },
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_int64",
+                                  "typeString": "int64"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 14,
+                              "type": "type(struct ExpenseTracker.Transaction storage pointer)",
+                              "value": "Transaction"
+                            },
+                            "id": 23,
+                            "name": "Identifier",
+                            "src": "395:11:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 107,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 24,
+                                "name": "Identifier",
+                                "src": "407:3:0"
+                              }
+                            ],
+                            "id": 25,
+                            "name": "MemberAccess",
+                            "src": "407:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 16,
+                              "type": "string memory",
+                              "value": "description"
+                            },
+                            "id": 26,
+                            "name": "Identifier",
+                            "src": "418:11:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 18,
+                              "type": "int64",
+                              "value": "amount"
+                            },
+                            "id": 27,
+                            "name": "Identifier",
+                            "src": "430:6:0"
+                          }
+                        ],
+                        "id": 28,
+                        "name": "FunctionCall",
+                        "src": "395:42:0"
+                      }
+                    ],
+                    "id": 29,
+                    "name": "VariableDeclarationStatement",
+                    "src": "370:67:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_Transaction_$14_memory_ptr",
+                                  "typeString": "struct ExpenseTracker.Transaction memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (struct ExpenseTracker.Transaction storage ref)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 7,
+                                  "type": "struct ExpenseTracker.Transaction storage ref[] storage ref",
+                                  "value": "transaction"
+                                },
+                                "id": 30,
+                                "name": "Identifier",
+                                "src": "448:11:0"
+                              }
+                            ],
+                            "id": 32,
+                            "name": "MemberAccess",
+                            "src": "448:16:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 22,
+                              "type": "struct ExpenseTracker.Transaction memory",
+                              "value": "tx1"
+                            },
+                            "id": 33,
+                            "name": "Identifier",
+                            "src": "465:3:0"
+                          }
+                        ],
+                        "id": 34,
+                        "name": "FunctionCall",
+                        "src": "448:21:0"
+                      }
+                    ],
+                    "id": 35,
+                    "name": "ExpressionStatement",
+                    "src": "448:21:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "+=",
+                          "type": "int256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 4,
+                              "type": "int256",
+                              "value": "balance"
+                            },
+                            "id": 36,
+                            "name": "Identifier",
+                            "src": "480:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 18,
+                              "type": "int64",
+                              "value": "amount"
+                            },
+                            "id": 37,
+                            "name": "Identifier",
+                            "src": "491:6:0"
+                          }
+                        ],
+                        "id": 38,
+                        "name": "Assignment",
+                        "src": "480:17:0"
+                      }
+                    ],
+                    "id": 39,
+                    "name": "ExpressionStatement",
+                    "src": "480:17:0"
+                  }
+                ],
+                "id": 40,
+                "name": "Block",
+                "src": "359:146:0"
+              }
+            ],
+            "id": 41,
+            "name": "FunctionDefinition",
+            "src": "286:219:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "b77bf600",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "transactionCount",
+              "overrides": null,
+              "scope": 59,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 42,
+                "name": "ParameterList",
+                "src": "542:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "overrides": null,
+                      "scope": 50,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 43,
+                        "name": "ElementaryTypeName",
+                        "src": "566:4:0"
+                      }
+                    ],
+                    "id": 44,
+                    "name": "VariableDeclaration",
+                    "src": "566:4:0"
+                  }
+                ],
+                "id": 45,
+                "name": "ParameterList",
+                "src": "565:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 45
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "length",
+                          "referencedDeclaration": null,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7,
+                              "type": "struct ExpenseTracker.Transaction storage ref[] storage ref",
+                              "value": "transaction"
+                            },
+                            "id": 46,
+                            "name": "Identifier",
+                            "src": "589:11:0"
+                          }
+                        ],
+                        "id": 47,
+                        "name": "MemberAccess",
+                        "src": "589:18:0"
+                      }
+                    ],
+                    "id": 48,
+                    "name": "Return",
+                    "src": "582:25:0"
+                  }
+                ],
+                "id": 49,
+                "name": "Block",
+                "src": "571:44:0"
+              }
+            ],
+            "id": 50,
+            "name": "FunctionDefinition",
+            "src": "517:98:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "8da9b772",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getHello",
+              "overrides": null,
+              "scope": 59,
+              "stateMutability": "pure",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 51,
+                "name": "ParameterList",
+                "src": "640:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "overrides": null,
+                      "scope": 58,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 52,
+                        "name": "ElementaryTypeName",
+                        "src": "664:6:0"
+                      }
+                    ],
+                    "id": 53,
+                    "name": "VariableDeclaration",
+                    "src": "664:13:0"
+                  }
+                ],
+                "id": 54,
+                "name": "ParameterList",
+                "src": "663:15:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 54
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "48656c6c6f2066726f6d20436f6e7472616374",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "string",
+                          "type": "literal_string \"Hello from Contract\"",
+                          "value": "Hello from Contract"
+                        },
+                        "id": 55,
+                        "name": "Literal",
+                        "src": "696:21:0"
+                      }
+                    ],
+                    "id": 56,
+                    "name": "Return",
+                    "src": "689:28:0"
+                  }
+                ],
+                "id": 57,
+                "name": "Block",
+                "src": "678:47:0"
+              }
+            ],
+            "id": 58,
+            "name": "FunctionDefinition",
+            "src": "623:102:0"
+          }
+        ],
+        "id": 59,
+        "name": "ContractDefinition",
+        "src": "36:698:0"
+      }
+    ],
+    "id": 60,
+    "name": "SourceUnit",
+    "src": "0:734:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.0+commit.26b70077.Emscripten.clang"
+  },
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0x0F8d57D73c3fCA58e255fC0395090bFa84ab5fdF",
+      "transactionHash": "0x769db9b0563754aec63fafde60eb07dd1befaf2c07cc95fa16796bc4a6da5918"
+    },
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x3621B15610d56bc6eD102170655750f594C1a8f5",
+      "transactionHash": "0x6a9232b17d75235b478830b595818e32e85d96b2b35ccac7459a087a83d6dd8a"
+    }
+  },
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-06-27T18:23:10.469Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
